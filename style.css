@@ -290,6 +290,7 @@ h4 {
 }
 
 .hero-text,
+.hero-info-card p,
 .section-heading p,
 .ai-copy p,
 .timeline-item p,
@@ -331,6 +332,54 @@ h4 {
   background: linear-gradient(90deg, rgba(156, 107, 255, 0.16), rgba(49, 216, 255, 0.12));
   backdrop-filter: blur(14px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.hero-info-card {
+  margin-top: 1.4rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.discord-link {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.discord-link:hover,
+.discord-link:focus-visible {
+  color: #5eead4;
+}
+
+.hero-info-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.info-item {
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.info-item strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.info-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .hero-visual {
