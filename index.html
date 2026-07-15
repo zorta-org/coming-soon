@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Zorta is the operating system for builders, creators, founders, and communities."
+    />
+    <title>Zorta — The operating system for builders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.21/dist/lenis.min.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="noise"></div>
+    <div class="cursor-light" aria-hidden="true"></div>
+    <div class="loading-screen" id="loadingScreen">
+      <div class="terminal-window" role="status" aria-live="polite">
+        <div class="terminal-bar">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="terminal-output" id="terminalOutput"></div>
+      </div>
+    </div>
+
+    <div class="page-shell" id="pageShell">
+      <header class="site-header">
+        <a class="brand" href="#hero" aria-label="Zorta home">
+          <span class="brand-mark"></span>
+          ZORTA
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#ecosystem">Ecosystem</a>
+          <a href="#features">Everything</a>
+          <a href="#identity">Profile</a>
+          <a href="#cta">Waitlist</a>
+        </nav>
+        <a class="btn btn-small btn-magnetic" href="#cta">Join Waitlist</a>
+      </header>
+
+      <main id="main">
+        <section class="hero section" id="hero">
+          <div class="hero-grid">
+            <div class="hero-copy reveal">
+              <p class="eyebrow">The builder operating system</p>
+              <h1>
+                One Platform.<br />
+                Infinite Possibilities.
+              </h1>
+              <p class="hero-text">
+                Zorta brings GitHub, LinkedIn, Reddit, Discord, Notion, Hostinger,
+                Fiverr, and AI into one connected ecosystem for building what comes next.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary btn-magnetic" href="#cta">Join Waitlist</a>
+                <a class="btn btn-secondary btn-magnetic" href="#ecosystem">Explore the Ecosystem</a>
+              </div>
+              <div class="hero-pill">Everything a builder needs lives here.</div>
+            </div>
+            <div class="hero-visual reveal" aria-hidden="true">
+              <div class="glass-orb orb-one"></div>
+              <div class="glass-orb orb-two"></div>
+              <div class="hero-card hero-card-main">
+                <p class="card-label">Connected infrastructure</p>
+                <h2>You do not need five websites anymore.</h2>
+                <div class="hero-stats">
+                  <div>
+                    <strong>Projects</strong>
+                    <span>from idea to launch</span>
+                  </div>
+                  <div>
+                    <strong>Communities</strong>
+                    <span>teams and circles</span>
+                  </div>
+                  <div>
+                    <strong>AI</strong>
+                    <span>built into every step</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-card hero-card-float">
+                <p class="card-label">Live signal</p>
+                <div class="signal-row">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-particles" id="heroParticles"></div>
+        </section>
+
+        <section class="ecosystem section" id="ecosystem">
+          <div class="section-heading reveal">
+            <p class="eyebrow">The ecosystem</p>
+            <h2>Every platform becomes a builder capability inside Zorta.</h2>
+          </div>
+          <div class="ecosystem-visual reveal" id="ecosystemVisual">
+            <div class="orbit-core">ZORTA</div>
+            <div class="orbit-node" data-label="GitHub" data-function="Repositories · Projects · Open Source">GitHub</div>
+            <div class="orbit-node" data-label="LinkedIn" data-function="Profile · Experience · Recruiters">LinkedIn</div>
+            <div class="orbit-node" data-label="Discord" data-function="Communities · Servers · Teams">Discord</div>
+            <div class="orbit-node" data-label="Reddit" data-function="Discussions · Guides · Trends">Reddit</div>
+            <div class="orbit-node" data-label="Notion" data-function="Docs · Roadmaps · Wiki">Notion</div>
+            <div class="orbit-node" data-label="Hostinger" data-function="Hosting · Deployments · Domains">Hostinger</div>
+            <div class="orbit-node" data-label="Fiverr" data-function="Jobs · Freelancers · Payments">Fiverr</div>
+            <div class="orbit-node" data-label="AI" data-function="Assistant · Matching · Automation">AI</div>
+          </div>
+        </section>
+
+        <section class="bento section" id="features">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Everything exists here</p>
+            <h2>A complete builder world, arranged as one calm interface.</h2>
+          </div>
+          <div class="bento-grid">
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⌘</span><h3>Projects</h3><p>Structure everything from first draft to launch.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⎔</span><h3>Git Repositories</h3><p>Version, share, and collaborate like a modern team.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">◼</span><h3>Developer Portfolio</h3><p>Turn your work into an elegant proof of momentum.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⬢</span><h3>Hosting</h3><p>Deploy applications, docs, and storefronts in one place.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">◎</span><h3>Domains</h3><p>Own your identity, your stack, and your brand.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">☁</span><h3>Cloud Storage</h3><p>Keep assets, files, and launch materials always at hand.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⇢</span><h3>Deployments</h3><p>Ship updates with confidence and clarity.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">◌</span><h3>Communities</h3><p>Build circles around product, growth, design, and AI.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">◍</span><h3>Forums</h3><p>Launch conversations that turn into momentum.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">✦</span><h3>Events</h3><p>Host sessions, meetups, and launches without friction.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⬡</span><h3>Hackathons</h3><p>Bring together builders, thinkers, and operators.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">▤</span><h3>Documentation</h3><p>Turn ideas into knowledge that scales.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">◫</span><h3>Wiki</h3><p>Build a living knowledge base for your team.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">✧</span><h3>Knowledge Base</h3><p>Collect insight, process, and playbooks in one place.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⚡</span><h3>Learning</h3><p>Discover the next skill, workflow, or framework.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">▣</span><h3>Courses</h3><p>Learn from the best builders across the network.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">◈</span><h3>Templates</h3><p>Start with a strong foundation, then customize.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">☼</span><h3>AI Assistant</h3><p>Plan, write, match, and automate in context.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">✶</span><h3>Co-Founder Matching</h3><p>Find the precision partner you need to move faster.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⬣</span><h3>Startup Hub</h3><p>See founders, operators, and builders in motion.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">↗</span><h3>Recruiters</h3><p>Discover the right talent before the market does.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⇄</span><h3>Hiring</h3><p>Launch opportunities without losing momentum.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⟡</span><h3>Freelancing</h3><p>Find support, skill, and trusted execution instantly.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">◳</span><h3>Marketplace</h3><p>Move from need to delivery without context switching.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">✉</span><h3>Team Chat</h3><p>Stay aligned with shared projects and communities.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⌁</span><h3>Roadmaps</h3><p>Plan the next milestone and the next win.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">★</span><h3>Achievements</h3><p>Make progress visible, credible, and lasting.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">◌</span><h3>Badges</h3><p>Celebrate proof of craft and contribution.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⤴</span><h3>Timeline</h3><p>Log your growth as a builder in real time.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">◮</span><h3>Payments</h3><p>Fund projects, rewards, and trusted work.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">✚</span><h3>Rewards</h3><p>Incentivize contribution and community momentum.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⬤</span><h3>Open Source</h3><p>Publish, contribute, and build in public.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">▱</span><h3>Extensions</h3><p>Plug your stack into the broader builder ecosystem.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">◎</span><h3>Analytics</h3><p>Understand traction, engagement, and growth.</p></article>
+            <article class="bento-card tilt-card reveal"><span class="card-icon">⬢</span><h3>Leaderboards</h3><p>Celebrate builders, creators, and founders.</p></article>
+          </div>
+        </section>
+
+        <section class="network section" id="connectivity">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Everything connects</p>
+            <h2>Every feature belongs to the same living system.</h2>
+          </div>
+          <div class="network-board reveal">
+            <svg viewBox="0 0 720 420" class="network-lines" aria-hidden="true">
+              <line class="network-line" data-source="projects" data-target="repositories" x1="120" y1="120" x2="260" y2="130"></line>
+              <line class="network-line" data-source="repositories" data-target="hosting" x1="260" y1="130" x2="430" y2="150"></line>
+              <line class="network-line" data-source="hosting" data-target="deployments" x1="430" y1="150" x2="600" y2="120"></line>
+              <line class="network-line" data-source="deployments" data-target="portfolio" x1="600" y1="120" x2="620" y2="260"></line>
+              <line class="network-line" data-source="portfolio" data-target="recruiters" x1="620" y1="260" x2="470" y2="330"></line>
+              <line class="network-line" data-source="recruiters" data-target="freelancing" x1="470" y1="330" x2="300" y2="330"></line>
+              <line class="network-line" data-source="freelancing" data-target="payments" x1="300" y1="330" x2="150" y2="300"></line>
+              <line class="network-line" data-source="payments" data-target="achievements" x1="150" y1="300" x2="120" y2="190"></line>
+              <line class="network-line" data-source="achievements" data-target="timeline" x1="120" y1="190" x2="250" y2="90"></line>
+            </svg>
+            <button class="network-node" data-node="projects">Projects</button>
+            <button class="network-node" data-node="repositories">Repositories</button>
+            <button class="network-node" data-node="hosting">Hosting</button>
+            <button class="network-node" data-node="deployments">Deployments</button>
+            <button class="network-node" data-node="portfolio">Portfolio</button>
+            <button class="network-node" data-node="recruiters">Recruiters</button>
+            <button class="network-node" data-node="freelancing">Freelancing</button>
+            <button class="network-node" data-node="payments">Payments</button>
+            <button class="network-node" data-node="achievements">Achievements</button>
+            <button class="network-node" data-node="timeline">Timeline</button>
+          </div>
+        </section>
+
+        <section class="identity section" id="identity">
+          <div class="section-heading reveal">
+            <p class="eyebrow">One profile. Infinite identity.</p>
+            <h2>Your profile grows with everything you build.</h2>
+          </div>
+          <div class="identity-stage reveal">
+            <div class="identity-profile">
+              <div class="avatar"></div>
+              <h3>Alex Rivera</h3>
+              <p>Developer • Founder • Creator</p>
+            </div>
+            <div class="identity-module module-1">Developer</div>
+            <div class="identity-module module-2">Founder</div>
+            <div class="identity-module module-3">Freelancer</div>
+            <div class="identity-module module-4">Designer</div>
+            <div class="identity-module module-5">Student</div>
+            <div class="identity-module module-6">Mentor</div>
+            <div class="identity-module module-7">Community Leader</div>
+            <div class="identity-module module-8">Recruiter</div>
+            <div class="identity-module module-9">Creator</div>
+            <div class="identity-module module-10">Open Source Contributor</div>
+            <div class="identity-module module-11">Startup Founder</div>
+            <div class="identity-module module-12">Verified Builder</div>
+          </div>
+        </section>
+
+        <section class="ai section" id="ai">
+          <div class="section-heading reveal">
+            <p class="eyebrow">What can you build?</p>
+            <h2>Ask once. Let the ecosystem take the next step.</h2>
+          </div>
+          <div class="ai-shell reveal">
+            <div class="ai-copy">
+              <div class="ai-input">Build a Discord Bot</div>
+              <div class="ai-steps">
+                <div class="ai-step">Plan the concept</div>
+                <div class="ai-step">Find collaborators</div>
+                <div class="ai-step">Deploy and host</div>
+                <div class="ai-step">Share with community</div>
+              </div>
+            </div>
+            <div class="ai-surface">
+              <div class="ai-search-label">Search query</div>
+              <div class="ai-prompt" id="aiPrompt">Build a Discord Bot</div>
+              <div class="ai-search-label">Workflow</div>
+              <div class="ai-workflow" id="aiWorkflow">
+                <div class="workflow-card">Create project</div>
+                <div class="workflow-card">Invite team</div>
+                <div class="workflow-card">Deploy server</div>
+                <div class="workflow-card">Share launch</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="marketplace section" id="marketplace">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Living marketplace preview</p>
+            <h2>Everything is active, connected, and moving.</h2>
+          </div>
+          <div class="marketplace-grid reveal">
+            <article class="market-card">Looking for React Developer</article>
+            <article class="market-card">Discord Bot Completed</article>
+            <article class="market-card">Designer Hired</article>
+            <article class="market-card">Server Deployed</article>
+            <article class="market-card">New Startup Recruiting</article>
+            <article class="market-card">Documentation Published</article>
+            <article class="market-card">Community Event Live</article>
+            <article class="market-card">Repository Updated</article>
+            <article class="market-card">Founder Connected</article>
+            <article class="market-card">Portfolio Featured</article>
+          </div>
+        </section>
+
+        <section class="timeline section" id="timeline">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Builder timeline</p>
+            <h2>Your identity evolves as your work compounds.</h2>
+          </div>
+          <div class="timeline-wrap reveal">
+            <div class="timeline-line"></div>
+            <ul class="timeline-list">
+              <li class="timeline-item"><span class="timeline-marker"></span><div><h3>Joined</h3><p>Arrived with an idea and a spark.</p></div></li>
+              <li class="timeline-item"><span class="timeline-marker"></span><div><h3>Created first project</h3><p>Built the first thing that made the future feel real.</p></div></li>
+              <li class="timeline-item"><span class="timeline-marker"></span><div><h3>Hosted application</h3><p>Turned a prototype into a presence.</p></div></li>
+              <li class="timeline-item"><span class="timeline-marker"></span><div><h3>Started community</h3><p>Brought others in around the mission.</p></div></li>
+              <li class="timeline-item"><span class="timeline-marker"></span><div><h3>Found teammates</h3><p>Built momentum with the right people.</p></div></li>
+              <li class="timeline-item"><span class="timeline-marker"></span><div><h3>Raised reputation</h3><p>Let your work speak for itself.</p></div></li>
+              <li class="timeline-item"><span class="timeline-marker"></span><div><h3>Launched startup</h3><p>Moved from builder to founder.</p></div></li>
+              <li class="timeline-item"><span class="timeline-marker"></span><div><h3>Hired first employee</h3><p>Expanded the system with trusted people.</p></div></li>
+              <li class="timeline-item"><span class="timeline-marker"></span><div><h3>Built company</h3><p>Created a world others can join.</p></div></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="metrics section" id="metrics">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Ecosystem metrics</p>
+            <h2>Not just users. A growing builder network.</h2>
+          </div>
+          <div class="metrics-grid reveal">
+            <div class="metric-card"><span>Repositories</span><strong>84K</strong></div>
+            <div class="metric-card"><span>Communities</span><strong>3.2K</strong></div>
+            <div class="metric-card"><span>Projects</span><strong>12K</strong></div>
+            <div class="metric-card"><span>Freelancers</span><strong>8.4K</strong></div>
+            <div class="metric-card"><span>Startups</span><strong>1.9K</strong></div>
+            <div class="metric-card"><span>Deployments</span><strong>26K</strong></div>
+            <div class="metric-card"><span>Docs Pages</span><strong>54K</strong></div>
+            <div class="metric-card"><span>Domains</span><strong>11K</strong></div>
+            <div class="metric-card"><span>Events</span><strong>480</strong></div>
+            <div class="metric-card"><span>Hackathons</span><strong>120</strong></div>
+          </div>
+        </section>
+
+        <section class="final-cta section" id="cta">
+          <div class="final-stage reveal">
+            <div class="final-particles" aria-hidden="true"></div>
+            <div class="final-badges" aria-hidden="true">
+              <div class="final-card">Projects</div>
+              <div class="final-card">Communities</div>
+              <div class="final-card">AI</div>
+              <div class="final-card">Hosting</div>
+              <div class="final-card">Recruiters</div>
+              <div class="final-card">Payments</div>
+            </div>
+            <div class="final-word">ZORTA</div>
+            <div class="final-copy">
+              <p>One Platform.</p>
+              <p>Infinite Possibilities.</p>
+              <p>Everything You Need To Build.</p>
+            </div>
+            <a class="btn btn-primary btn-magnetic" href="mailto:hello@zorta.ai">Join the Waitlist</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Built for creators.</p>
+        <p>Built for developers.</p>
+        <p>Built for founders.</p>
+        <p>Built for dreamers.</p>
+        <p>Built for you.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
