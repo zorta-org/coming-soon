@@ -1,8 +1,14 @@
-ZORTA COMING SOON SITE
+ZORTA — zorta.org (coming soon site + Zorta Hosting)
 
-Files:
-- index.html — landing / coming soon page
-- games.html — Play Games page
-- styles.css — responsive visual system
-- assets/zorta-logo.jpg — supplied Zorta logo
+Structure
+  /index.html            Coming soon homepage (with Zorta Hosting note)
+  /games.html            Games page (coming soon)
+  /styles.css            Styles for the coming soon site
+  /assets/zorta-logo.jpg Logo for the coming soon site
+  /hosting/              Zorta Hosting  ->  zorta.org/hosting
+      index.html         Plans (free, premium, VPS) + "Host anything" + terms summary
+      contact.html, faq.html, terms.html, privacy.html
+      hosting.css, app.js, image.png
 
+Deploy: upload the whole folder as a static site (no build step).
+All Zorta email addresses use contact@zorta.org.
